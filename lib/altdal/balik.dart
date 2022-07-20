@@ -2,6 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class balikPage extends StatelessWidget {
+  final List<String> categories = [
+    "hamsi",
+    "palamut",
+    "istarvit",
+    "çupra",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +26,37 @@ class balikPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [header("Balıks", context), buildCategory("balık")],
+              children: [
+                header("Balıks", context),
+                Row(
+                    children: categories
+                        .map((String title) => buildCategory(title))
+                        .toList()),
+
+                /* Row(
+                  children: [
+                    buildCategory("balık"),
+                    SizedBox(width: 10.0),
+                    buildCategory("balık"),
+                    SizedBox(width: 10.0),
+                    buildCategory("balık"),
+                    SizedBox(width: 10.0),
+                    buildCategory("balık"),
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  children: [
+                    buildCategory("balık"),
+                    SizedBox(width: 10.0),
+                    buildCategory("balık"),
+                    SizedBox(width: 10.0),
+                    buildCategory("balık"),
+                    SizedBox(width: 10.0),
+                    buildCategory("balık"),
+                  ],
+                ),*/
+              ],
             ),
           )
         ])));
@@ -41,6 +78,7 @@ class balikPage extends StatelessWidget {
   Widget buildCategory(String title) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+      margin: EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.circular(6),
