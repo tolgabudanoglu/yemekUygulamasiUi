@@ -5,8 +5,7 @@ class balikPage extends StatelessWidget {
   final List<String> categories = [
     "hamsi",
     "palamut",
-    "istarvit",
-    "çupra",
+    
   ];
 
   @override
@@ -25,10 +24,19 @@ class balikPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              
+              
               children: [
                 header("Balıks", context),
+                SizedBox(height: 20.0),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: categories
+                        .map((String title) => buildCategory(title))
+                        .toList()),
+                        Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: categories
                         .map((String title) => buildCategory(title))
                         .toList()),
@@ -77,8 +85,10 @@ class balikPage extends StatelessWidget {
 
   Widget buildCategory(String title) {
     return Container(
+      width: 150,height: 100,
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       margin: EdgeInsets.only(right: 10),
+      
       decoration: BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.circular(6),
