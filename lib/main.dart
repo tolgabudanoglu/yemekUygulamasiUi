@@ -1,14 +1,12 @@
-
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/altdal/tavuk.dart';
+import 'package:flutter_application_2/beyazEtler.dart';
 import 'package:flutter_application_2/giris.dart';
 import 'package:flutter_application_2/home.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -16,10 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        'beyazetler': (_) => beyazEtlerPage(),
+        'tavuk': (_) => tavukPage(),
+        'home': (_) => HomePage(),
+        'giris': (_) => girisPage(),
+      },
       title: 'Gastropos',
       theme: ThemeData(
         primarySwatch: Colors.red,
-
       ),
       home: girisPage(),
     );
