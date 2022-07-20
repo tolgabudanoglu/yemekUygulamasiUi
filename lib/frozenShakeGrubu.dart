@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class sogukIceceklerPage extends StatelessWidget {
+class frozenShakeFrubuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-         title:const Text ('soğuk icecekler'),
+         title:const Text ('frozen shake'),
          leading: GestureDetector(
     onTap: () {  },
     child: const Icon(
@@ -17,6 +17,8 @@ class sogukIceceklerPage extends StatelessWidget {
          )
       
          ),
+        
+      
     );
    
   }

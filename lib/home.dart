@@ -2,9 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/beyazEtler.dart';
+import 'package:flutter_application_2/kahveGrubu.dart';
 import 'package:flutter_application_2/kirmiziEtler.dart';
 import 'package:flutter_application_2/makarnalar.dart';
+import 'package:flutter_application_2/pizzalar.dart';
+import 'package:flutter_application_2/sicakIcecekler.dart';
 import 'package:flutter_application_2/salatalar.dart';
+import 'package:flutter_application_2/sogukIcecekler.dart';
 import 'package:flutter_application_2/tumUrunler.dart';
 
 class HomePage extends StatefulWidget {
@@ -63,22 +67,22 @@ class _homePageState  extends State<HomePage>{
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                  
-                 butonFonk(text: "tüm ürünler",icon:Icons.add,widget:tumUrunlerPage(),context: context),
-                 butonFonk(text: "kırmızı etler",icon:Icons.add,widget: kirmiziEtlerPage(),context: context),
+                 butonFonk(text: "kahve grubu",icon:Icons.add,widget:kahveGrubuPage(),context: context),
+                 butonFonk(text: "frozen shake grubu",icon:Icons.add,widget: kirmiziEtlerPage(),context: context),
                   butonFonk(text: "beyaz etler",icon:Icons.add,widget: beyazEtlerPage(),context: context),
                    butonFonk(text: "makarnalar",icon:Icons.add,widget: makarnalarPage(),context: context),
               ]
                ),
                SizedBox(height: 20.0),
-                  Row(
+                 Row(
                     
                     
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[ 
                  butonFonk(text: "salatalar",icon:Icons.add,widget:salatalarPage(),context: context),
-                 butonFonk(text: "pizzalar",icon:Icons.add,widget: kirmiziEtlerPage(),context: context),
-                  butonFonk(text: "sıcak içecek",icon:Icons.add,widget: beyazEtlerPage(),context: context),
-                   butonFonk(text: "soğuk içecek",icon:Icons.add,widget: makarnalarPage(),context: context),
+                 butonFonk(text: "pizzalar",icon:Icons.add,widget: pizzalarPage(),context: context),
+                  butonFonk(text: "sıcak içecek",icon:Icons.add,widget:sicakIceceklerPage(),context: context),
+                   butonFonk(text: "soğuk içecek",icon:Icons.add,widget:sogukIceceklerPage(),context: context),
               ]
                ),
               ],

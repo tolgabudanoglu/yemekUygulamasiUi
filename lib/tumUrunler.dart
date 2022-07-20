@@ -7,11 +7,20 @@ class tumUrunlerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Stack(children: [
-        
-      ],)),
-    )
-   ;
+      appBar: AppBar(
+         title:const Text ('tüm ürünler'),
+         leading: GestureDetector(
+    onTap: () {  },
+    child: const Icon(
+      Icons.menu
+     
+          
+      ),
+         )
+      
+         ),
+    );
+   
   }
   
 

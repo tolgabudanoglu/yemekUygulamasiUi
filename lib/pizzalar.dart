@@ -5,11 +5,20 @@ class pizzalarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Stack(children: [
-        
-      ],)),
-    )
-   ;
+     appBar: AppBar(
+         title:const Text ('pizzalar'),
+         leading: GestureDetector(
+    onTap: () {  },
+    child: const Icon(
+      Icons.menu
+     
+          
+      ),
+         )
+      
+         ),
+    );
+   
   }
   
 
