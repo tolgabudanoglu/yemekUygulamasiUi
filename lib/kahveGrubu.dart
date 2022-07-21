@@ -19,22 +19,41 @@ class kahveGrubuPage extends StatelessWidget {
          ),
 
             body: GridView.count(
-          // Create a grid with 2 columns. If you change the scrollDirection to
-          // horizontal, this produces 2 rows.
-          crossAxisCount: 4,
-          // Generate 100 widgets that display their index in the List.
+          
+          crossAxisCount: 2,
+          
+          
           children: List.generate(100, (index) {
             return Center(
-              child: Text(
-                'Item $index',
-                style: Theme.of(context).textTheme.headline5,
+              child: ListTile(
+                onTap: (){},
+                leading: Container(
+                  width: 150,
+                  height: 500,
+                  color:Colors.grey,
+                    child: Column(children: [
+        
+        //Image.asset('images/balik.png'),
+        
+        Column(
+          children: [
+            Text("Hamsi"),
+            Text("32TL"),
+          ],
+        )
+      ]),
+                ),
+                
               ),
             );
           }),
         ),
+      
     );
-   
+ 
   }
+
+  
   
 
   
